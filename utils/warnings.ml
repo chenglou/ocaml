@@ -569,17 +569,6 @@ let report w =
              }
 ;;
 
-#if undefined BS_NO_COMPILER_PATCH then
-let super_report message w =
-  match is_active w with
-  | false -> `Inactive
-  | true ->
-     if is_error w then incr nerrors;
-     `Active { number = number w; message = message w; is_error = is_error w;
-               sub_locs = sub_locs w;
-             }
-;;    
-#end
 exception Errors;;
 
 let reset_fatal () =

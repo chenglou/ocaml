@@ -126,7 +126,4 @@ val mk_lazy: (unit -> 'a) -> 'a Lazy.t
 #if undefined BS_NO_COMPILER_PATCH then
 val message : t -> string 
 val number: t -> int
-val super_report :
-  (t -> string) ->
-  t ->  [ `Active of reporting_information | `Inactive ]
 #end
